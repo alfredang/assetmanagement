@@ -120,7 +120,7 @@
 
     const startAuto = () => {
       stopAuto();
-      timer = setInterval(next, 5000);
+      timer = setInterval(next, 7000);
     };
     const stopAuto = () => { if (timer) clearInterval(timer); };
 

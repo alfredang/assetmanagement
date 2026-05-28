@@ -12,6 +12,12 @@ credentials.json
 .mcp.json
 .claude/settings.local.json
 .claude/
+.agents/
+.playwright-mcp/
+skills-lock.json
+
+# Local verification screenshots
+redesign-*.png
 
 # OS / editor cruft
 .DS_Store

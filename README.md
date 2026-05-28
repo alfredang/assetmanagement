@@ -1,6 +1,6 @@
 # Apex Asset Management
 
-A single-page marketing site for **Apex Asset Management**, a fictional wealth-management firm. Built as a pure static site — no framework, no build step, no package manager.
+A single-page marketing site for **Apex Asset Management**, a fictional sustainability-led asset manager. Built as a pure static site — no framework, no build step, no package manager.
 
 **Live site:** https://alfredang.github.io/assetmanagement/
 
@@ -9,20 +9,21 @@ A single-page marketing site for **Apex Asset Management**, a fictional wealth-m
 ## Stack
 
 - `index.html` — semantic single-page structure
-- `styles.css` — design tokens (navy / gold palette), components, responsive rules
+- `styles.css` — design tokens (forest / sage / sand palette), components, responsive rules
 - `script.js` — interactivity (IIFE, no modules)
 
-Only runtime dependency: Google Fonts (Playfair Display + Inter).
+Only runtime dependency: Google Fonts (Fraunces + Space Grotesk + JetBrains Mono).
 
 ## Features
 
-- Fixed nav with smooth-scroll anchors (Home, Why Us, Testimonials, Contact)
-- Hero section with animated stat counters (data-attribute driven)
-- "Why Us" USP grid with inline SVG icons
+- Fixed nav with smooth-scroll anchors (Home, Approach, Ledger, Stewards, Contact)
+- Hero with topographic SVG contours, idle-sway sapling accent, and animated ESG stat counters (data-attribute driven)
+- "Approach" grid — four stewardship pillars, each backed by a number and a mono-font meta line
+- **2024 Impact Ledger** — financial and stewardship metrics in equal-weight columns, with inline methodology disclosures (PCAF / GIPS / ISAE 3410)
 - Auto-rotating testimonial carousel (pauses on hover/focus)
 - Contact form wired to [FormSubmit](https://formsubmit.co) via async `fetch()`
 - Fade-in on scroll via IntersectionObserver
-- Full `prefers-reduced-motion` support
+- Full `prefers-reduced-motion` support (pauses sway, skips counter animation, kills transitions)
 - Responsive down to mobile
 
 ## Running locally

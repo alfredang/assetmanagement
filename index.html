@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Apex Asset Management — personalized wealth management with a proven track record, transparent fees, and expert advisors." />
-  <title>Apex Asset Management — Grow Your Wealth with Confidence</title>
+  <meta name="description" content="Apex Asset Management — long-horizon, climate-aligned capital stewardship. Audited 1.5°C portfolio alignment, disclosed proxy voting, flat 0.65% fee." />
+  <meta name="theme-color" content="#0f3d2e" />
+  <title>Apex Asset Management — Capital, with a longer view</title>
 
-  <!-- Google Fonts: Playfair Display (serif headings) + Inter (sans body) -->
+  <!-- Google Fonts: Fraunces (editorial serif) + Space Grotesk (humanist grotesk) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
@@ -20,7 +21,14 @@
     <nav id="navbar" class="navbar" aria-label="Primary">
       <div class="container nav-inner">
         <a href="#home" class="brand" aria-label="Apex Asset Management home">
-          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-mark" aria-hidden="true">
+            <!-- Sprout monogram: stem + two leaves, systemic mark -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21v-9"/>
+              <path d="M12 12c0-3.3 2.4-5.8 5.6-5.8C17.6 9.5 15.2 12 12 12z" fill="currentColor" fill-opacity="0.25"/>
+              <path d="M12 14.5c0-2.4-1.8-4.2-4.2-4.2 0 2.4 1.8 4.2 4.2 4.2z" fill="currentColor" fill-opacity="0.25"/>
+            </svg>
+          </span>
           <span class="brand-text">Apex Asset Management</span>
         </a>
 
@@ -30,8 +38,9 @@
 
         <ul class="nav-links" id="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#why-us">Approach</a></li>
+          <li><a href="#ledger">Ledger</a></li>
+          <li><a href="#testimonials">Stewards</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -42,82 +51,261 @@
     <!-- ============ HERO ============ -->
     <section id="home" class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
+
+      <!-- Topographic contour lines — subtle, editorial -->
+      <div class="hero-topo" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#c7d5b8" stroke-width="1" opacity="0.32">
+            <path d="M-100 720 Q 220 640 480 690 T 980 670 T 1540 720"/>
+            <path d="M-100 640 Q 240 560 500 610 T 1000 590 T 1540 640"/>
+            <path d="M-100 560 Q 260 480 520 530 T 1020 510 T 1540 560"/>
+            <path d="M-100 480 Q 280 400 540 450 T 1040 430 T 1540 480"/>
+            <path d="M-100 400 Q 300 320 560 370 T 1060 350 T 1540 400"/>
+            <path d="M-100 320 Q 320 240 580 290 T 1080 270 T 1540 320"/>
+            <path d="M-100 240 Q 340 160 600 210 T 1100 190 T 1540 240"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Decorative sapling — slow idle sway, hidden under reduced-motion via CSS -->
+      <svg class="hero-sapling" viewBox="0 0 240 320" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Main stem -->
+          <path d="M120 320 C 122 240 118 180 124 120 C 128 80 124 50 130 22"/>
+          <!-- Branches -->
+          <path d="M124 220 C 100 210 80 200 64 184"/>
+          <path d="M124 180 C 150 170 172 156 188 138"/>
+          <path d="M126 140 C 108 132 92 122 78 108"/>
+          <path d="M128 92 C 148 84 164 72 176 56"/>
+          <!-- Leaves -->
+          <path d="M64 184 C 48 178 38 168 36 152 C 50 152 62 162 66 178 Z" fill="currentColor" fill-opacity="0.18"/>
+          <path d="M188 138 C 204 130 212 116 212 102 C 198 104 188 116 186 132 Z" fill="currentColor" fill-opacity="0.18"/>
+          <path d="M78 108 C 60 102 50 90 48 74 C 62 76 74 86 78 102 Z" fill="currentColor" fill-opacity="0.18"/>
+          <path d="M176 56 C 190 48 198 36 198 22 C 184 22 174 32 172 48 Z" fill="currentColor" fill-opacity="0.18"/>
+          <path d="M130 22 C 128 12 132 4 142 0 C 144 12 138 22 130 22 Z" fill="currentColor" fill-opacity="0.18"/>
+        </g>
+      </svg>
+
       <div class="container hero-inner">
-        <p class="eyebrow">Trusted Wealth Management Since 2000</p>
-        <h1 class="hero-title">Grow Your Wealth with <span class="accent">Confidence</span></h1>
+        <p class="eyebrow eyebrow-light">Stewardship of Capital · Est. 2000</p>
+        <h1 class="hero-title">Capital, with a <span class="accent">longer</span> view.</h1>
         <p class="hero-sub">
-          Apex Asset Management delivers personalized investment strategies, transparent fees,
-          and decades of disciplined performance — built around your goals.
+          Apex allocates institutional and family capital toward the enterprises building the low-carbon
+          economy — measured against a 1.5°C pathway, audited annually, and disclosed line by line.
+          <a href="#ledger">See the 2024 ledger →</a>
         </p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Get Started</a>
-          <a href="#why-us" class="btn btn-secondary">Learn More</a>
+          <a href="#contact" class="btn btn-primary">
+            Book a consultation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#why-us" class="btn btn-secondary">Read the approach</a>
         </div>
 
         <ul class="stats" id="stats">
           <li class="stat">
             <span class="stat-value" data-target="2.4" data-prefix="$" data-suffix="B" data-decimals="1">$0.0B</span>
-            <span class="stat-label">Assets Under Management</span>
+            <span class="stat-label">Assets Under Stewardship</span>
+            <span class="stat-note">As of 31 Dec 2024</span>
           </li>
           <li class="stat">
-            <span class="stat-value" data-target="1200" data-suffix="+">0+</span>
-            <span class="stat-label">Clients Served</span>
+            <span class="stat-value" data-target="84" data-suffix="%">0%</span>
+            <span class="stat-label">Portfolio aligned with 1.5°C pathway</span>
+            <span class="stat-note">PCAF · Scope 1+2, weighted</span>
           </li>
           <li class="stat">
-            <span class="stat-value" data-target="25" data-suffix="">0</span>
-            <span class="stat-label">Years of Experience</span>
+            <span class="stat-value" data-target="412" data-suffix="k">0k</span>
+            <span class="stat-label">tCO₂e financed-emissions avoided (FY24)</span>
+            <span class="stat-note">vs. 2019 baseline · audited KPMG</span>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ USP / WHY US ============ -->
+    <!-- ============ APPROACH / PILLARS ============ -->
     <section id="why-us" class="section usp">
       <div class="container">
         <header class="section-head fade-in">
-          <p class="eyebrow eyebrow-dark">Why Choose Us</p>
-          <h2>Built on Discipline, Driven by Results</h2>
+          <p class="eyebrow eyebrow-dark">The Approach</p>
+          <h2>Stewardship is structural, not <span class="accent">decorative</span>.</h2>
           <p class="section-lead">
-            Four pillars guide everything we do — so your money works as hard as you did to earn it.
+            Four operating principles — each translated into a number, a published cadence,
+            or a third-party verification. Anything that isn't measurable, we don't claim.
           </p>
         </header>
 
         <div class="usp-grid">
           <article class="usp-card fade-in">
+            <span class="usp-num">01 / Allocation</span>
             <div class="usp-icon" aria-hidden="true">
-              <!-- Target icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+              <!-- Spiral: compounding / long horizon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12 m0 -8 a8 8 0 1 1 -8 8 a6 6 0 1 1 6 -6 a4 4 0 1 1 -4 4 a2 2 0 1 1 2 -2"/>
+              </svg>
             </div>
-            <h3>Personalized Strategy</h3>
-            <p>Every portfolio is tailored to your goals, timeline, and risk tolerance — never one-size-fits-all.</p>
+            <h3>Long-horizon allocation</h3>
+            <p>Average holding period of <strong>7.2 years</strong> across active mandates — versus the industry median of 11 months. Patience is a return driver, not a marketing line.</p>
+            <p class="usp-meta">avg holding · 7.2y</p>
           </article>
 
           <article class="usp-card fade-in">
+            <span class="usp-num">02 / Engagement</span>
             <div class="usp-icon" aria-hidden="true">
-              <!-- Chart-up icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg>
+              <!-- Two-way arrows: engagement / dialogue -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 9h12l-3-3M20 15H8l3 3"/>
+                <circle cx="3" cy="9" r="1" fill="currentColor"/>
+                <circle cx="21" cy="15" r="1" fill="currentColor"/>
+              </svg>
             </div>
-            <h3>Proven Track Record</h3>
-            <p>Two decades of consistent risk-adjusted returns through every market cycle, audited and verified.</p>
+            <h3>Active stewardship</h3>
+            <p>Every proxy vote published quarterly. <strong>100% disclosure</strong>, including the votes we lost. 23 board engagements escalated to public statement in FY24.</p>
+            <p class="usp-meta">votes disclosed · 100%</p>
           </article>
 
           <article class="usp-card fade-in">
+            <span class="usp-num">03 / Verification</span>
             <div class="usp-icon" aria-hidden="true">
-              <!-- Shield icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+              <!-- Balance / scale -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4v16"/>
+                <path d="M6 8l-3 6h6l-3-6zM18 8l-3 6h6l-3-6z"/>
+                <path d="M4 20h16"/>
+              </svg>
             </div>
-            <h3>Transparent Fees</h3>
-            <p>No hidden charges, no commission products. One clear fee, fully disclosed before you sign anything.</p>
+            <h3>Independent verification</h3>
+            <p>Emissions inventory audited annually by <strong>KPMG</strong> to ISAE 3410 standard. SBTi-aligned targets reviewed every 18 months.</p>
+            <p class="usp-meta">audit · ISAE 3410</p>
           </article>
 
           <article class="usp-card fade-in">
+            <span class="usp-num">04 / Alignment</span>
             <div class="usp-icon" aria-hidden="true">
-              <!-- Badge icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+              <!-- Tide line / level -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12 Q 7 8 12 12 T 21 12"/>
+                <path d="M3 17 Q 7 13 12 17 T 21 17"/>
+                <circle cx="12" cy="6" r="1.5" fill="currentColor"/>
+              </svg>
             </div>
-            <h3>Expert Advisors</h3>
-            <p>CFA-credentialed advisors with an average of 18 years of experience guiding individuals and families.</p>
+            <h3>Aligned fees</h3>
+            <p>Flat <strong>0.65%</strong> of net assets. No commission products, no soft dollars, no carried interest on impact mandates. Disclosed before you sign.</p>
+            <p class="usp-meta">fee · 65 bps flat</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPACT LEDGER ============ -->
+    <section id="ledger" class="section ledger">
+      <div class="container">
+        <header class="section-head fade-in">
+          <p class="eyebrow eyebrow-dark">The 2024 Ledger</p>
+          <h2>Financial and impact, in the same <span class="accent">column width</span>.</h2>
+          <p class="section-lead">
+            We don't relegate impact numbers to a footer badge. Both sides are audited.
+            Click the <em>i</em> on any metric to read the methodology.
+          </p>
+        </header>
+
+        <div class="ledger-grid fade-in">
+          <!-- FINANCIAL COLUMN -->
+          <div class="ledger-col">
+            <div class="ledger-head">
+              <h3>Financial</h3>
+              <span class="ledger-period">FY 2024 · Audited</span>
+            </div>
+            <div class="ledger-rows">
+              <div class="ledger-row">
+                <div class="ledger-num">12.4<span class="ledger-unit">%</span></div>
+                <div class="ledger-label">
+                  5-year annualised net return, all-mandate composite
+                  <details class="methodology">
+                    <summary aria-label="Methodology for 5-year annualised net return">i</summary>
+                    <div class="methodology-body">
+                      Time-weighted, net of all fees. GIPS-compliant composite.
+                      Benchmark: MSCI ACWI Climate Paris Aligned. <a href="#">Full methodology →</a>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ledger-row">
+                <div class="ledger-num">0.65<span class="ledger-unit">%</span></div>
+                <div class="ledger-label">
+                  Flat advisory fee, no carried interest on impact mandates
+                </div>
+              </div>
+              <div class="ledger-row">
+                <div class="ledger-num">7.2<span class="ledger-unit">yr</span></div>
+                <div class="ledger-label">
+                  Average holding period across active strategies
+                </div>
+              </div>
+              <div class="ledger-row">
+                <div class="ledger-num">96<span class="ledger-unit">%</span></div>
+                <div class="ledger-label">
+                  Client retention, trailing 5 years (institutional + family office)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMPACT COLUMN -->
+          <div class="ledger-col impact">
+            <div class="ledger-head">
+              <h3>Stewardship</h3>
+              <span class="ledger-period">FY 2024 · KPMG-verified</span>
+            </div>
+            <div class="ledger-rows">
+              <div class="ledger-row">
+                <div class="ledger-num">84<span class="ledger-unit">%</span></div>
+                <div class="ledger-label">
+                  Portfolio weighted to 1.5°C-aligned issuers
+                  <details class="methodology">
+                    <summary aria-label="Methodology for 1.5°C alignment">i</summary>
+                    <div class="methodology-body">
+                      Per PCAF Standard, weighted by NAV. Issuer alignment determined
+                      via SBTi validated targets or independent transition-plan review.
+                      <a href="#">Read the PCAF disclosure →</a>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ledger-row">
+                <div class="ledger-num">412<span class="ledger-unit">k tCO₂e</span></div>
+                <div class="ledger-label">
+                  Financed-emissions avoided vs. 2019 baseline
+                  <details class="methodology">
+                    <summary aria-label="Methodology for avoided emissions">i</summary>
+                    <div class="methodology-body">
+                      Scope 1 + 2 financed emissions, attribution by enterprise value
+                      including cash (EVIC). Audited annually by KPMG to ISAE 3410.
+                      <a href="#">View the inventory →</a>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ledger-row">
+                <div class="ledger-num">100<span class="ledger-unit">%</span></div>
+                <div class="ledger-label">
+                  Proxy votes published — including those we lost
+                  <details class="methodology">
+                    <summary aria-label="Methodology for proxy disclosure">i</summary>
+                    <div class="methodology-body">
+                      All votes cast at portfolio-company AGMs are published within
+                      30 days, with rationale. No exclusions. <a href="#">2024 voting record →</a>
+                    </div>
+                  </details>
+                </div>
+              </div>
+              <div class="ledger-row">
+                <div class="ledger-num">23<span class="ledger-unit"></span></div>
+                <div class="ledger-label">
+                  Board engagements escalated to public statement in FY24
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -126,52 +314,52 @@
     <section id="testimonials" class="section testimonials">
       <div class="container">
         <header class="section-head fade-in">
-          <p class="eyebrow eyebrow-dark">What Our Clients Say</p>
-          <h2>Trusted by Investors Like You</h2>
+          <p class="eyebrow eyebrow-dark">Our Stewards</p>
+          <h2>Trusted by capital that <span class="accent">measures decades</span>.</h2>
         </header>
 
         <div class="carousel fade-in" id="carousel" aria-roledescription="carousel" aria-label="Client testimonials">
           <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous testimonial">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
           </button>
 
           <div class="carousel-viewport">
             <ul class="carousel-track" id="carouselTrack">
               <li class="slide" aria-roledescription="slide" aria-label="1 of 3">
                 <blockquote>
-                  <p>"Apex took the time to understand my retirement goals and built a plan I actually understand. After three years, I'm ahead of schedule and sleeping better at night."</p>
+                  <p>Apex was the first manager to give us a portfolio-weighted emissions number without us asking — and the first to send us their <em>methodology</em> in the same email. That's what stewardship looks like when it isn't theatre.</p>
                 </blockquote>
                 <div class="client">
-                  <div class="avatar" aria-hidden="true">MR</div>
+                  <div class="avatar" aria-hidden="true">EH</div>
                   <div>
-                    <div class="client-name">Margaret Reyes</div>
-                    <div class="client-role">Retired Engineer</div>
+                    <div class="client-name">Eleanor Hawke</div>
+                    <div class="client-role">CIO, University Endowment ($1.8B AUM)</div>
                   </div>
                 </div>
               </li>
 
               <li class="slide" aria-roledescription="slide" aria-label="2 of 3">
                 <blockquote>
-                  <p>"Running a business means my income is unpredictable. Apex structured a plan that flexes with my cash flow — no other firm I spoke to even tried."</p>
+                  <p>We needed a manager our family could trust over a thirty-year horizon. Apex's quarterly stewardship reports read like primary research — and the fee structure has not moved in eight years.</p>
                 </blockquote>
                 <div class="client">
                   <div class="avatar" aria-hidden="true">DT</div>
                   <div>
                     <div class="client-name">David Tanaka</div>
-                    <div class="client-role">Small Business Owner</div>
+                    <div class="client-role">Principal, Tanaka Family Office</div>
                   </div>
                 </div>
               </li>
 
               <li class="slide" aria-roledescription="slide" aria-label="3 of 3">
                 <blockquote>
-                  <p>"Transparent, patient, and genuinely on my side. They explained the fees on day one and have never deviated. I recommend them to every colleague who asks."</p>
+                  <p>Their proxy voting record matched our mission inside one cycle. Most managers required three letters and a board meeting. Apex sent the disclosure unprompted, with the votes they lost highlighted first.</p>
                 </blockquote>
                 <div class="client">
                   <div class="avatar" aria-hidden="true">PK</div>
                   <div>
                     <div class="client-name">Priya Kapoor</div>
-                    <div class="client-role">Physician &amp; Family Investor</div>
+                    <div class="client-role">Treasurer, Climate-Focused Foundation</div>
                   </div>
                 </div>
               </li>
@@ -179,7 +367,7 @@
           </div>
 
           <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next testimonial">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
           </button>
 
           <div class="dots" id="carouselDots" role="tablist" aria-label="Choose testimonial">
@@ -193,41 +381,42 @@
 
     <!-- ============ CONTACT FORM ============ -->
     <!--
-      FormSubmit setup:
-      1. Replace `your-email@example.com` in the form `action` below with your real address.
-      2. The FIRST time anyone submits this form, FormSubmit emails that address with a
-         one-time confirmation link. Click it to activate the endpoint. After that,
-         submissions arrive automatically.
+      FormSubmit setup unchanged:
+      1. Replace `your-email@example.com` in the form `action` with your real address.
+      2. The FIRST submission triggers a one-time confirmation email — click the link to activate.
     -->
     <section id="contact" class="section contact">
       <div class="container contact-grid">
         <div class="contact-intro fade-in">
-          <p class="eyebrow">Get in Touch</p>
-          <h2>Let's Talk About Your Goals</h2>
+          <p class="eyebrow eyebrow-dark">Begin a Conversation</p>
+          <h2>Tell us what you're <span class="accent">stewarding</span>.</h2>
           <p>
-            Tell us a little about yourself and we'll be in touch within one business day to schedule
-            a complimentary, no-obligation consultation.
+            We take on a small number of new mandates each year. Tell us briefly about your capital,
+            your horizon, and what you'd like measured — we'll reply within one business day.
           </p>
           <ul class="contact-points">
-            <li>No cost. No pressure. No commission products.</li>
-            <li>Confidential — your information is never shared.</li>
-            <li>Response within 1 business day.</li>
+            <li>No commission products, no soft dollars, no referral fees.</li>
+            <li>Initial conversations are confidential and non-binding.</li>
+            <li>Response within one business day. Institutional or family capital.</li>
           </ul>
+
+          <div class="contact-meta">
+            <strong>Disclosures</strong>
+            <span>GIPS-compliant performance · ISAE 3410 emissions audit · PCAF-aligned reporting</span>
+          </div>
         </div>
 
         <form
           id="contactForm"
           class="contact-form fade-in"
-          action="https://formsubmit.co/your-email@example.com"
+          action="https://formsubmit.co/angch@tertiaryinfotech.com"
           method="POST"
           novalidate
         >
-          <!-- FormSubmit configuration (hidden) -->
           <input type="hidden" name="_subject" value="New enquiry from Apex Asset Management website" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="#thank-you" />
-          <!-- Honeypot to deter spam bots -->
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
           <div class="field">
@@ -243,29 +432,32 @@
           </div>
 
           <div class="field">
-            <label for="phone">Phone Number</label>
+            <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" autocomplete="tel" />
             <small class="field-error" data-for="phone"></small>
           </div>
 
           <div class="field">
-            <label for="range">Investment Range</label>
+            <label for="range">Capital Bracket</label>
             <select id="range" name="investment_range">
-              <option value="">Select a range</option>
-              <option>Less than $50k</option>
-              <option>$50k – $250k</option>
-              <option>$250k – $1M</option>
-              <option>$1M+</option>
+              <option value="">Select a bracket</option>
+              <option>Family · $1M – $10M</option>
+              <option>Family · $10M – $100M</option>
+              <option>Institutional · $100M – $500M</option>
+              <option>Institutional · $500M+</option>
             </select>
           </div>
 
           <div class="field field-full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals…"></textarea>
+            <label for="message">What would you like measured?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Horizon, mandate type, specific ESG questions…"></textarea>
           </div>
 
           <div class="form-footer field-full">
-            <button type="submit" class="btn btn-primary" id="submitBtn">Send Enquiry</button>
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              Send enquiry
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </div>
         </form>
@@ -279,18 +471,25 @@
     <div class="container footer-grid">
       <div>
         <div class="brand brand-footer">
-          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21v-9"/>
+              <path d="M12 12c0-3.3 2.4-5.8 5.6-5.8C17.6 9.5 15.2 12 12 12z" fill="currentColor" fill-opacity="0.25"/>
+              <path d="M12 14.5c0-2.4-1.8-4.2-4.2-4.2 0 2.4 1.8 4.2 4.2 4.2z" fill="currentColor" fill-opacity="0.25"/>
+            </svg>
+          </span>
           <span class="brand-text">Apex Asset Management</span>
         </div>
-        <p class="footer-tag">Disciplined investing. Personalized service.</p>
+        <p class="footer-tag">Long-horizon capital. Audited stewardship. Disclosed line by line.</p>
       </div>
 
       <div>
-        <h4>Quick Links</h4>
+        <h4>Navigate</h4>
         <ul class="footer-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#why-us">Approach</a></li>
+          <li><a href="#ledger">The 2024 Ledger</a></li>
+          <li><a href="#testimonials">Stewards</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -304,20 +503,20 @@
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.92a8.2 8.2 0 01-2.36.65 4.1 4.1 0 001.8-2.26 8.2 8.2 0 01-2.6 1 4.1 4.1 0 00-7 3.74A11.65 11.65 0 013 4.79a4.1 4.1 0 001.27 5.47 4.07 4.07 0 01-1.86-.51v.05a4.1 4.1 0 003.29 4.02 4.1 4.1 0 01-1.85.07 4.1 4.1 0 003.83 2.85A8.23 8.23 0 012 18.4a11.62 11.62 0 006.29 1.84c7.55 0 11.68-6.25 11.68-11.67l-.01-.53A8.3 8.3 0 0022 5.92z"/></svg>
+            <a href="#" aria-label="Substack">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16v3H4V4zm0 5h16v3H4V9zm0 5h16v6l-8-4-8 4v-6z"/></svg>
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.6c0-.87.27-1.46 1.54-1.46H17V4.4c-.27-.04-1.21-.13-2.3-.13-2.28 0-3.84 1.39-3.84 3.94v2.19H8.5v3H10.86V21h2.64z"/></svg>
+            <a href="#" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
             </a>
           </li>
         </ul>
       </div>
 
       <div>
-        <h4>Contact</h4>
+        <h4>Office</h4>
         <address class="footer-address">
           200 Financial Plaza, Suite 1500<br />
           New York, NY 10004<br />
@@ -328,8 +527,9 @@
 
     <div class="container footer-bottom">
       <p class="disclaimer">
-        Investments carry risk. Past performance does not guarantee future results. Apex Asset Management is a fictional example
-        firm; this website is a demonstration.
+        Investments carry risk. Past performance does not guarantee future results.
+        Apex Asset Management is a fictional firm; this site is a demonstration. All metrics shown
+        are illustrative.
       </p>
       <p class="copyright">&copy; <span id="year"></span> Apex Asset Management. All rights reserved.</p>
     </div>
