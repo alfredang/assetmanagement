@@ -4,6 +4,8 @@ A single-page marketing site for **Apex Asset Management**, a fictional wealth-m
 
 **Live site:** https://alfredang.github.io/assetmanagement/
 
+![Apex Asset Management — hero](docs/screenshot.png)
+
 ## Stack
 
 - `index.html` — semantic single-page structure
