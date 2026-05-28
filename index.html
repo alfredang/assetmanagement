@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apex Asset Management — personalized wealth management with a proven track record, transparent fees, and expert advisors." />
+  <title>Apex Asset Management — Grow Your Wealth with Confidence</title>
+
+  <!-- Google Fonts: Playfair Display (serif headings) + Inter (sans body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- ============ NAVIGATION ============ -->
+  <header>
+    <nav id="navbar" class="navbar" aria-label="Primary">
+      <div class="container nav-inner">
+        <a href="#home" class="brand" aria-label="Apex Asset Management home">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-text">Apex Asset Management</span>
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Trusted Wealth Management Since 2000</p>
+        <h1 class="hero-title">Grow Your Wealth with <span class="accent">Confidence</span></h1>
+        <p class="hero-sub">
+          Apex Asset Management delivers personalized investment strategies, transparent fees,
+          and decades of disciplined performance — built around your goals.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#why-us" class="btn btn-secondary">Learn More</a>
+        </div>
+
+        <ul class="stats" id="stats">
+          <li class="stat">
+            <span class="stat-value" data-target="2.4" data-prefix="$" data-suffix="B" data-decimals="1">$0.0B</span>
+            <span class="stat-label">Assets Under Management</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value" data-target="1200" data-suffix="+">0+</span>
+            <span class="stat-label">Clients Served</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value" data-target="25" data-suffix="">0</span>
+            <span class="stat-label">Years of Experience</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ USP / WHY US ============ -->
+    <section id="why-us" class="section usp">
+      <div class="container">
+        <header class="section-head fade-in">
+          <p class="eyebrow eyebrow-dark">Why Choose Us</p>
+          <h2>Built on Discipline, Driven by Results</h2>
+          <p class="section-lead">
+            Four pillars guide everything we do — so your money works as hard as you did to earn it.
+          </p>
+        </header>
+
+        <div class="usp-grid">
+          <article class="usp-card fade-in">
+            <div class="usp-icon" aria-hidden="true">
+              <!-- Target icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <h3>Personalized Strategy</h3>
+            <p>Every portfolio is tailored to your goals, timeline, and risk tolerance — never one-size-fits-all.</p>
+          </article>
+
+          <article class="usp-card fade-in">
+            <div class="usp-icon" aria-hidden="true">
+              <!-- Chart-up icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg>
+            </div>
+            <h3>Proven Track Record</h3>
+            <p>Two decades of consistent risk-adjusted returns through every market cycle, audited and verified.</p>
+          </article>
+
+          <article class="usp-card fade-in">
+            <div class="usp-icon" aria-hidden="true">
+              <!-- Shield icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Transparent Fees</h3>
+            <p>No hidden charges, no commission products. One clear fee, fully disclosed before you sign anything.</p>
+          </article>
+
+          <article class="usp-card fade-in">
+            <div class="usp-icon" aria-hidden="true">
+              <!-- Badge icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+            </div>
+            <h3>Expert Advisors</h3>
+            <p>CFA-credentialed advisors with an average of 18 years of experience guiding individuals and families.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <header class="section-head fade-in">
+          <p class="eyebrow eyebrow-dark">What Our Clients Say</p>
+          <h2>Trusted by Investors Like You</h2>
+        </header>
+
+        <div class="carousel fade-in" id="carousel" aria-roledescription="carousel" aria-label="Client testimonials">
+          <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="carousel-viewport">
+            <ul class="carousel-track" id="carouselTrack">
+              <li class="slide" aria-roledescription="slide" aria-label="1 of 3">
+                <blockquote>
+                  <p>"Apex took the time to understand my retirement goals and built a plan I actually understand. After three years, I'm ahead of schedule and sleeping better at night."</p>
+                </blockquote>
+                <div class="client">
+                  <div class="avatar" aria-hidden="true">MR</div>
+                  <div>
+                    <div class="client-name">Margaret Reyes</div>
+                    <div class="client-role">Retired Engineer</div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="slide" aria-roledescription="slide" aria-label="2 of 3">
+                <blockquote>
+                  <p>"Running a business means my income is unpredictable. Apex structured a plan that flexes with my cash flow — no other firm I spoke to even tried."</p>
+                </blockquote>
+                <div class="client">
+                  <div class="avatar" aria-hidden="true">DT</div>
+                  <div>
+                    <div class="client-name">David Tanaka</div>
+                    <div class="client-role">Small Business Owner</div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="slide" aria-roledescription="slide" aria-label="3 of 3">
+                <blockquote>
+                  <p>"Transparent, patient, and genuinely on my side. They explained the fees on day one and have never deviated. I recommend them to every colleague who asks."</p>
+                </blockquote>
+                <div class="client">
+                  <div class="avatar" aria-hidden="true">PK</div>
+                  <div>
+                    <div class="client-name">Priya Kapoor</div>
+                    <div class="client-role">Physician &amp; Family Investor</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <div class="dots" id="carouselDots" role="tablist" aria-label="Choose testimonial">
+            <button role="tab" class="dot" aria-label="Show testimonial 1"></button>
+            <button role="tab" class="dot" aria-label="Show testimonial 2"></button>
+            <button role="tab" class="dot" aria-label="Show testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT FORM ============ -->
+    <!--
+      FormSubmit setup:
+      1. Replace `your-email@example.com` in the form `action` below with your real address.
+      2. The FIRST time anyone submits this form, FormSubmit emails that address with a
+         one-time confirmation link. Click it to activate the endpoint. After that,
+         submissions arrive automatically.
+    -->
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div class="contact-intro fade-in">
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Let's Talk About Your Goals</h2>
+          <p>
+            Tell us a little about yourself and we'll be in touch within one business day to schedule
+            a complimentary, no-obligation consultation.
+          </p>
+          <ul class="contact-points">
+            <li>No cost. No pressure. No commission products.</li>
+            <li>Confidential — your information is never shared.</li>
+            <li>Response within 1 business day.</li>
+          </ul>
+        </div>
+
+        <form
+          id="contactForm"
+          class="contact-form fade-in"
+          action="https://formsubmit.co/your-email@example.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit configuration (hidden) -->
+          <input type="hidden" name="_subject" value="New enquiry from Apex Asset Management website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="#thank-you" />
+          <!-- Honeypot to deter spam bots -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="field">
+            <label for="name">Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+            <small class="field-error" data-for="name"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <small class="field-error" data-for="email"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            <small class="field-error" data-for="phone"></small>
+          </div>
+
+          <div class="field">
+            <label for="range">Investment Range</label>
+            <select id="range" name="investment_range">
+              <option value="">Select a range</option>
+              <option>Less than $50k</option>
+              <option>$50k – $250k</option>
+              <option>$250k – $1M</option>
+              <option>$1M+</option>
+            </select>
+          </div>
+
+          <div class="field field-full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals…"></textarea>
+          </div>
+
+          <div class="form-footer field-full">
+            <button type="submit" class="btn btn-primary" id="submitBtn">Send Enquiry</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+      <div id="thank-you" tabindex="-1"></div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand brand-footer">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-text">Apex Asset Management</span>
+        </div>
+        <p class="footer-tag">Disciplined investing. Personalized service.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Connect</h4>
+        <ul class="socials" aria-label="Social media">
+          <li>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.02 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.8v1.7h.06c.53-1 1.83-2.06 3.76-2.06 4.02 0 4.76 2.65 4.76 6.1V21h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.81V21h-4V9z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.92a8.2 8.2 0 01-2.36.65 4.1 4.1 0 001.8-2.26 8.2 8.2 0 01-2.6 1 4.1 4.1 0 00-7 3.74A11.65 11.65 0 013 4.79a4.1 4.1 0 001.27 5.47 4.07 4.07 0 01-1.86-.51v.05a4.1 4.1 0 003.29 4.02 4.1 4.1 0 01-1.85.07 4.1 4.1 0 003.83 2.85A8.23 8.23 0 012 18.4a11.62 11.62 0 006.29 1.84c7.55 0 11.68-6.25 11.68-11.67l-.01-.53A8.3 8.3 0 0022 5.92z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.6c0-.87.27-1.46 1.54-1.46H17V4.4c-.27-.04-1.21-.13-2.3-.13-2.28 0-3.84 1.39-3.84 3.94v2.19H8.5v3H10.86V21h2.64z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <address class="footer-address">
+          200 Financial Plaza, Suite 1500<br />
+          New York, NY 10004<br />
+          <a href="mailto:hello@apexassets.example">hello@apexassets.example</a>
+        </address>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="disclaimer">
+        Investments carry risk. Past performance does not guarantee future results. Apex Asset Management is a fictional example
+        firm; this website is a demonstration.
+      </p>
+      <p class="copyright">&copy; <span id="year"></span> Apex Asset Management. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
