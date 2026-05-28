@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Apex Asset Management — long-horizon, climate-aligned capital stewardship. Audited 1.5°C portfolio alignment, disclosed proxy voting, flat 0.65% fee." />
   <meta name="theme-color" content="#0f3d2e" />
+  <meta name="color-scheme" content="light dark" />
   <title>Apex Asset Management — Capital, with a longer view</title>
+
+  <!-- Anti-flicker: apply saved theme before first paint -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('apex-theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
 
   <!-- Google Fonts: Fraunces (editorial serif) + Space Grotesk (humanist grotesk) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,6 +41,24 @@
           </span>
           <span class="brand-text">Apex Asset Management</span>
         </a>
+
+        <button
+          id="themeToggle"
+          type="button"
+          class="theme-toggle"
+          aria-label="Toggle color theme"
+          aria-pressed="false"
+        >
+          <!-- Sun icon — shown in dark mode to switch to light -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <!-- Moon icon — shown in light mode to switch to dark -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
 
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
           <span></span><span></span><span></span>
@@ -465,6 +493,67 @@
       <div id="thank-you" tabindex="-1"></div>
     </section>
   </main>
+
+  <!-- ============ WHATSAPP WIDGET ============ -->
+  <!--
+    OPERATOR: replace the phone number in script.js — search for WHATSAPP_NUMBER.
+    The number below is a placeholder: 6591234567 (Singapore E.164, no leading +).
+  -->
+  <div class="wa-widget" id="waWidget">
+    <!-- Nudge tooltip — shown once per session, fades out after ~4 s -->
+    <div class="wa-nudge" id="waNudge" aria-hidden="true">Chat with us</div>
+
+    <!-- Chat-preview popover -->
+    <div
+      class="wa-popover"
+      id="waPopover"
+      role="dialog"
+      aria-labelledby="waPopoverTitle"
+      aria-modal="true"
+      data-state="closed"
+    >
+      <header class="wa-popover-head">
+        <div class="wa-avatar" aria-hidden="true">A</div>
+        <div class="wa-popover-meta">
+          <p id="waPopoverTitle" class="wa-popover-title">Apex Stewardship Desk</p>
+          <p class="wa-popover-status">
+            <span class="wa-dot" aria-hidden="true"></span> Typically replies within the hour
+          </p>
+        </div>
+        <button class="wa-close" id="waClose" type="button" aria-label="Close chat">&times;</button>
+      </header>
+      <div class="wa-popover-body">
+        <p class="wa-bubble">
+          Hello — questions about climate-aligned mandates, fees, or onboarding?
+          Chat with us on WhatsApp.
+        </p>
+      </div>
+      <!-- CTA href is set by script.js at runtime -->
+      <a class="wa-cta" id="waCta" href="#" target="_blank" rel="noopener">
+        <!-- WhatsApp glyph (speech-bubble + handset path, official shape) -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.655 1.435 5.163L2 22l4.956-1.418A9.956 9.956 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm0 1.8a8.2 8.2 0 1 1 0 16.4 8.173 8.173 0 0 1-4.132-1.113l-.296-.175-3.067.877.896-3-.193-.308A8.173 8.173 0 0 1 3.8 12 8.2 8.2 0 0 1 12 3.8Zm-2.67 4.37c-.195-.433-.4-.442-.585-.45l-.498-.006c-.173 0-.454.065-.691.325s-.909.888-.909 2.165 .929 2.512 1.058 2.686 1.81 2.898 4.42 3.942c2.187.862 2.612.69 3.084.647.47-.043 1.517-.62 1.731-1.219.213-.6.213-1.113.15-1.22-.065-.107-.238-.172-.498-.302s-1.538-.759-1.777-.845c-.238-.087-.41-.13-.584.13-.173.26-.67.845-.822 1.02-.151.173-.303.195-.563.065-.26-.13-1.097-.404-2.09-1.29-.772-.688-1.294-1.538-1.445-1.797-.151-.26-.016-.4.114-.53.116-.115.26-.302.39-.454.13-.151.173-.26.26-.433.086-.173.043-.325-.022-.455-.065-.13-.572-1.405-.8-1.92Z"/>
+        </svg>
+        Start WhatsApp chat
+      </a>
+    </div>
+
+    <!-- Launcher button -->
+    <button
+      class="wa-launcher"
+      id="waLauncher"
+      type="button"
+      aria-label="Open WhatsApp chat"
+      aria-expanded="false"
+      aria-controls="waPopover"
+    >
+      <!-- WhatsApp glyph, 28×28 viewport -->
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.524 3.655 1.435 5.163L2 22l4.956-1.418A9.956 9.956 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm0 1.8a8.2 8.2 0 1 1 0 16.4 8.173 8.173 0 0 1-4.132-1.113l-.296-.175-3.067.877.896-3-.193-.308A8.173 8.173 0 0 1 3.8 12 8.2 8.2 0 0 1 12 3.8Zm-2.67 4.37c-.195-.433-.4-.442-.585-.45l-.498-.006c-.173 0-.454.065-.691.325s-.909.888-.909 2.165 .929 2.512 1.058 2.686 1.81 2.898 4.42 3.942c2.187.862 2.612.69 3.084.647.47-.043 1.517-.62 1.731-1.219.213-.6.213-1.113.15-1.22-.065-.107-.238-.172-.498-.302s-1.538-.759-1.777-.845c-.238-.087-.41-.13-.584.13-.173.26-.67.845-.822 1.02-.151.173-.303.195-.563.065-.26-.13-1.097-.404-2.09-1.29-.772-.688-1.294-1.538-1.445-1.797-.151-.26-.016-.4.114-.53.116-.115.26-.302.39-.454.13-.151.173-.26.26-.433.086-.173.043-.325-.022-.455-.065-.13-.572-1.405-.8-1.92Z"/>
+      </svg>
+    </button>
+  </div>
+  <!-- /WHATSAPP WIDGET -->
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">

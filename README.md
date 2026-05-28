@@ -22,6 +22,7 @@ Only runtime dependency: Google Fonts (Fraunces + Space Grotesk + JetBrains Mono
 - **2024 Impact Ledger** — financial and stewardship metrics in equal-weight columns, with inline methodology disclosures (PCAF / GIPS / ISAE 3410)
 - Auto-rotating testimonial carousel (pauses on hover/focus)
 - Contact form wired to [FormSubmit](https://formsubmit.co) via async `fetch()`
+- Floating WhatsApp chat widget pinned bottom-right, opens `wa.me` in a new tab
 - Fade-in on scroll via IntersectionObserver
 - Full `prefers-reduced-motion` support (pauses sway, skips counter animation, kills transitions)
 - Responsive down to mobile
@@ -51,6 +52,8 @@ To make the contact form work with your own email, edit the `action` attribute o
 ```
 
 FormSubmit will email a confirmation link to that address on the first submission — click it to activate the endpoint.
+
+To wire the WhatsApp widget to your own number, edit `WHATSAPP_NUMBER` (and the prefill message) near the top of [script.js](script.js). Use international E.164 form with no leading `+`.
 
 ## Design tokens
 

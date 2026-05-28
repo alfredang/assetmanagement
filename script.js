@@ -4,11 +4,50 @@
    testimonial carousel, fade-in observer, form submission.
    ========================================================= */
 
+// ---------------------------------------------------------------------------
+// WhatsApp Widget — configurable constants
+// OPERATOR: replace WHATSAPP_NUMBER with your real WhatsApp Business number
+// in international E.164 format WITHOUT the leading + (e.g. 6591234567).
+// ---------------------------------------------------------------------------
+const WHATSAPP_NUMBER  = '6591234567'; // <-- REPLACE THIS with your number
+const WHATSAPP_PREFILL = 'Hello Apex — I would like to learn more about your climate-aligned mandates.';
+
 (() => {
   'use strict';
 
   // Respect users who prefer reduced motion: skip transforms/counters.
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Theme toggle ---------- */
+  (function () {
+    var root   = document.documentElement;
+    var btn    = document.getElementById('themeToggle');
+    var STORE  = 'apex-theme';
+
+    function applyTheme(theme) {
+      root.dataset.theme = theme;
+      if (btn) btn.setAttribute('aria-pressed', String(theme === 'dark'));
+    }
+
+    // Sync button state to whatever the anti-flicker script set.
+    applyTheme(root.dataset.theme || 'light');
+
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        localStorage.setItem(STORE, next);
+      });
+    }
+
+    // Track OS preference changes — only act if user has not chosen explicitly.
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    mq.addEventListener('change', function (e) {
+      if (!localStorage.getItem(STORE)) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  })();
 
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById('year');
@@ -234,4 +273,80 @@
       }
     });
   }
+
+  /* ---------- WhatsApp Widget ---------- */
+  (function () {
+    const launcher = document.getElementById('waLauncher');
+    const popover  = document.getElementById('waPopover');
+    const closeBtn = document.getElementById('waClose');
+    const ctaLink  = document.getElementById('waCta');
+    const nudge    = document.getElementById('waNudge');
+
+    if (!launcher || !popover) return;
+
+    // Build the wa.me URL once and assign it to the CTA anchor.
+    if (ctaLink) {
+      ctaLink.href = 'https://wa.me/' + WHATSAPP_NUMBER +
+        '?text=' + encodeURIComponent(WHATSAPP_PREFILL);
+    }
+
+    // --- Open / close helpers ---
+    const openPopover = () => {
+      popover.dataset.state = 'open';
+      launcher.setAttribute('aria-expanded', 'true');
+      // Move focus to the close button for keyboard users.
+      if (closeBtn) closeBtn.focus();
+    };
+
+    const closePopover = () => {
+      popover.dataset.state = 'closed';
+      launcher.setAttribute('aria-expanded', 'false');
+      // Return focus to the launcher button.
+      launcher.focus();
+    };
+
+    const isOpen = () => popover.dataset.state === 'open';
+
+    // --- Launcher click ---
+    launcher.addEventListener('click', () => {
+      isOpen() ? closePopover() : openPopover();
+    });
+
+    // --- Close button ---
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closePopover);
+    }
+
+    // --- Escape key closes ---
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) {
+        closePopover();
+      }
+    });
+
+    // --- Click outside to close ---
+    document.addEventListener('click', (e) => {
+      if (!isOpen()) return;
+      const widget = document.getElementById('waWidget');
+      if (widget && !widget.contains(e.target)) {
+        closePopover();
+      }
+    });
+
+    // --- One-time nudge tooltip ---
+    // Show only if: reduced-motion is not preferred AND not yet seen this session.
+    const nudgeSeen = sessionStorage.getItem('apex-wa-nudge-seen');
+    if (nudge && !reducedMotion && nudgeSeen !== '1') {
+      // Small delay so the page has settled before the nudge appears.
+      setTimeout(() => {
+        nudge.classList.add('is-visible');
+        // Mark as seen after the animation completes (4.5 s) so it won't
+        // re-appear if the user navigates via hash links on the same page.
+        setTimeout(() => {
+          sessionStorage.setItem('apex-wa-nudge-seen', '1');
+          nudge.classList.remove('is-visible');
+        }, 4500);
+      }, 1200);
+    }
+  })();
 })();
